@@ -1,15 +1,15 @@
 (function ($) {
     $(document).ready(function () {
-        $('.button-send').click(function () {
-            var valForm = $('.validate').val();
-            var resultValForm = Validator.isEmail(valForm);
-            if (resultValForm) {
-                document.location.href = "https://www.google.com.ua";
-                $('.validate').removeClass('errorForm');
+        $('.footer-subscribe-button').click(function () {
+            var valForm = $('.footer-subscribe').val();
+            if (Validator.isEmail(valForm)) {
+                $('.footer-subscribe').removeClass('error-Form');
                 $('.text-errors').hide();
+                event.preventDefault();
+                window.location.reload();
             } else {
                 event.preventDefault();
-                $('.validate').addClass('errorForm');
+                $('.footer-subscribe').addClass('error-Form');
                 $('.text-errors').show();
             }
         });
