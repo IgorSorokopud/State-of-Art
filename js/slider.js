@@ -1,37 +1,15 @@
 (function ($) {
     var Slider = {
-        _arrowForward: '.forward-arrow',
-        _arrowBack: '.back-arrow',
-        _width: 500,
-        _height: 350,
-        _idSlider: '#slider',
-
-        setIdSlider: function () {
-            var idSlider = this._idSlider;
-            var setWidth = this._width;
-            var setHeight = this._height;
-            var allLi = idSlider + ' li';
-            var wrapperSlider = "#" + $(idSlider).parent().closest('div').attr('id');
-            jQuery(wrapperSlider + ' ,' + allLi).css({
-                'height': setHeight
-            });
-            var numberLi = jQuery(allLi).length;
-            var lengthAllSliders = setWidth * numberLi;
-            jQuery(idSlider).css({
-                'width': lengthAllSliders,
-                'height': setHeight
-            });
-        },
-
+        
         moveLeft: function () {
             var width = this._width;
             var sliderId = this._idSlider;
             $('.active').prev().addClass('active').next().removeClass('active');
-            jQuery(sliderId).animate({
+            $(sliderId).animate({
                 left: +width
             }, 800, function () {
-                jQuery(sliderId + ' li:last-child').prependTo(sliderId);
-                jQuery(sliderId).css('left', '');
+                $(sliderId + ' li:last-child').prependTo(sliderId);
+                $(sliderId).css('left', '');
             });
         },
 
@@ -39,15 +17,15 @@
             var width = this._width;
             var sliderId = this._idSlider;
             $('.active').next().addClass('active').prev().removeClass('active');
-            jQuery(sliderId).animate({
+            $(sliderId).animate({
                 right: +width
             }, 800, function () {
-                jQuery(sliderId + ' li:first-child').appendTo(sliderId);
-                jQuery(sliderId).css('right', '');
+                $(sliderId + ' li:first-child').appendTo(sliderId);
+                $(sliderId).css('right', '');
             });
         },
 
-        events: function () {
+        init: function () {
             var self = this;
             $(this._arrowBack).on('click', function () {
                 self.moveLeft();
@@ -55,9 +33,7 @@
             $(this._arrowForward).on('click', function () {
                 self.moveRight();
             });
-        },
-        init: function () {
-            this.events();
+
         }
     };
 
