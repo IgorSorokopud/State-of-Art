@@ -1,35 +1,23 @@
 @font-face {
     font-family: 'EngraversGothicBT-Regular';
-    src: url('../fonts/EngraversGothicBT-Regular.eot?#iefix')
-    format('embedded-opentype'), url('../fonts/EngraversGothicBT-Regular.woff')
-    format('woff'), url('../fonts/EngraversGothicBT-Regular.ttf')
-    format('truetype'), url('../fonts/EngraversGothicBT-Regular.svg#EngraversGothicBT-Regular')
-    format('svg');
+    src: url('../fonts/EngraversGothicBT-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/EngraversGothicBT-Regular.woff') format('woff'), url('../fonts/EngraversGothicBT-Regular.ttf') format('truetype'), url('../fonts/EngraversGothicBT-Regular.svg#EngraversGothicBT-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HelveticaNeueBold';
-    src: url('../fonts/HelveticaNeueBold.eot?#iefix')
-    format('embedded-opentype'), url('../fonts/HelveticaNeueBold.woff')
-    format('woff'), url('../fonts/HelveticaNeueBold.svg#HelveticaNeueBold')
-    format('svg');
+    src: url('../fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueBold.woff') format('woff'), url('../fonts/HelveticaNeueBold.svg#HelveticaNeueBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'HelveticaNeue-Thin';
-    src: url('../fonts/HelveticaNeue-Thin.eot?#iefix')
-    format('embedded-opentype'),  url('../fonts/HelveticaNeue-Thin.otf')  format('opentype'),
-    url('../fonts/HelveticaNeue-Thin.woff') format('woff'), url('../fonts/HelveticaNeue-Thin.ttf')
-    format('truetype'), url('../fonts/HelveticaNeue-Thin.svg#HelveticaNeue-Thin') format('svg');
+    src: url('../fonts/HelveticaNeue-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Thin.otf') format('opentype'), url('../fonts/HelveticaNeue-Thin.woff') format('woff'), url('../fonts/HelveticaNeue-Thin.ttf') format('truetype'), url('../fonts/HelveticaNeue-Thin.svg#HelveticaNeue-Thin') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 
 body {
     margin: 0;
@@ -37,7 +25,7 @@ body {
     font-family: 'EngraversGothicBT-Regular', Arial, HelveticaNeueBold;
 }
 
-.wrapper-content{
+.wrapper-content {
     width: 1024px;
     height: 670px;
     margin: 0 auto;
@@ -179,6 +167,7 @@ header {
     .price-tablet {
         background: url("../img/suitcase.png") no-repeat 4% center;
     }
+
     .list-path li {
         margin-top: 6px;
     }
@@ -269,12 +258,15 @@ header {
         margin-top: 74px;
         position: absolute;
     }
+
     .header-nav li:hover {
         background-color: #F1F1F1;
     }
+
     .header-nav li:first-child {
         margin-left: 17px;
     }
+
     .header-nav li {
         padding: 8px;
         display: block;
@@ -283,12 +275,15 @@ header {
         border-bottom: 1px solid #C0C0C0;
         border-right: 1px solid #C0C0C0;
     }
+
     .header-nav {
         background: url("../img/logo_Tablet.png") no-repeat center;
     }
+
     .button {
         display: block;
     }
+
     .price-tablet {
         float: none;
         width: 148px;
@@ -297,12 +292,15 @@ header {
         margin: 0 auto;
         padding-top: 5px;
     }
+
     .sum-tablet {
         display: block;
     }
+
     .header-nav-center {
         width: 100%;
     }
+
     .link-tablet {
         top: 11px;
     }
@@ -314,20 +312,23 @@ header {
     }
 }
 
-    @media (max-width: 500px) {
+@media (max-width: 500px) {
     .header-nav ul {
         width: 100%;
     }
+
     .button {
         top: 13px;
         left: 8px;
     }
+
     .price-tablet {
         width: 142px;
     }
+
     .link-price {
-            width: 118px;
-        }
+        width: 118px;
+    }
 }
 
 /*Content*/
@@ -390,6 +391,7 @@ header {
     .list-path ul {
         display: none;
     }
+
     .list-path {
         margin: 13px 12px;
     }
@@ -439,7 +441,8 @@ header {
     height: 540px;
     float: left;
     list-style-type: none;
-    background-color: #fff;}
+    background-color: #fff;
+}
 
 #slider li {
     opacity: 0.3;
@@ -530,7 +533,7 @@ header {
     padding-right: 14%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    background: #FF6600 url("../img/arrow_button.png")no-repeat 90% center;
+    background: #FF6600 url("../img/arrow_button.png") no-repeat 90% center;
 }
 
 .clothing-look:hover {
@@ -550,7 +553,7 @@ header {
     height: 15px;
     float: right;
     display: block;
-    background: url("../img/arrow_print.png")no-repeat center right;
+    background: url("../img/arrow_print.png") no-repeat center right;
 }
 
 .block-info-model span {
@@ -558,7 +561,7 @@ header {
 }
 
 .delen {
-    background: url("../img/delen.png")no-repeat center left;
+    background: url("../img/delen.png") no-repeat center left;
     width: 50px;
     cursor: pointer;
 }
@@ -566,7 +569,7 @@ header {
 .print {
     cursor: pointer;
     margin-top: 12px;
-    background: url("../img/print.png")no-repeat center left;
+    background: url("../img/print.png") no-repeat center left;
 }
 
 .price-orange {
@@ -582,13 +585,13 @@ header {
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .forward-arrow {
         right: 1%;
     }
 }
 
-@media (max-width:850px) {
+@media (max-width: 850px) {
     #slider {
         margin-left: -200px;
     }
@@ -599,14 +602,17 @@ header {
         margin-left: -319px;
         margin-top: 85px;
     }
+
     .forward-arrow {
         top: 302px;
         right: 12.4%;
     }
+
     .back-arrow {
         top: 304px;
         left: 12.4%;
     }
+
     .info-model {
         margin: 29px 55px 0 0;
     }
@@ -616,9 +622,11 @@ header {
     .back-arrow {
         left: 2%;
     }
+
     .forward-arrow {
         right: 2%;
     }
+
     #slider {
         margin-left: -400px;
     }
@@ -634,22 +642,28 @@ header {
     .wrapper-content {
         height: 475px;
     }
+
     #slider .active img {
         height: 47%;
         width: 30%;
     }
+
     .back-arrow {
         top: 410px;
     }
+
     .forward-arrow {
         top: 410px;
     }
+
     #slider {
         margin: 0 0 0 -495px;
     }
+
     .info-model {
         margin: 1px 174px 0 0;
     }
+
     .clothing-look {
         width: 87%;
         font-size: 12px;
@@ -657,21 +671,27 @@ header {
         padding-right: 19px;
         background: #FF6600;
     }
+
     .clothing {
         margin-bottom: 12px;
     }
+
     .back-arrow {
         left: -2%;
     }
+
     .forward-arrow {
         right: -2%;
     }
+
     #slider li {
         width: 500px;
     }
+
     .clothing-price {
         text-decoration: line-through;
     }
+
     .price-orange {
         display: block;
         text-decoration: none;
@@ -965,36 +985,46 @@ header {
         position: relative;
         padding: 23px 10px;
     }
+
     .block-form input {
         width: 80%;
     }
+
     .block-form button {
         width: 17%;
     }
+
     .footer-header ul {
         width: 91%;
     }
+
     .footer-header {
         height: auto;
     }
+
     .column-footer {
         width: 33%;
     }
+
     .column-social {
         width: 33%;
     }
+
     .form-social, .icon-social {
         width: 100%;
         float: none;
         margin-bottom: 18px;
     }
+
     .footer-nav-wrapper {
         height: auto;
         width: 100%;
     }
+
     .footer-bottom {
         width: 100%;
     }
+
     .footer-bottom p {
         width: 55%;
     }
@@ -1005,50 +1035,65 @@ header {
         padding: 7px 0 0 17px;
         box-sizing: border-box;
     }
+
     .block-form {
         width: 103%;
         margin: 17px 0 0 3px;
     }
+
     .block-form input {
         width: 81%;
     }
+
     .block-form button {
         width: 14%;
     }
+
     .hide {
         display: none;
     }
+
     .column-social {
         width: 30%;
     }
+
     .icon-social ul {
         margin: 10px 0 0 3px;
     }
+
     .footer-header li {
         line-height: 19px;
     }
+
     .footer-header {
         height: 55px;
     }
+
     .footer-wrapper {
         padding-bottom: 0;
     }
+
     .column2 {
         margin: -5px 0;
     }
+
     .uw {
         margin: -4px 0;
     }
+
     .form-social, .icon-social {
         margin-bottom: 14px;
     }
+
     .footer-nav-wrapper ul {
         margin: 7px 0;
     }
+
     .footer-bottom {
         height: 75px;
         line-height: 14px;
     }
+
     .footer-bottom p {
         margin: 15px auto;
     }
@@ -1058,14 +1103,17 @@ header {
     .footer-nav {
         height: auto;
     }
+
     .footer-nav-wrapper p {
         float: none;
         margin: 6px auto;
     }
+
     .footer-nav-wrapper ul {
         float: none;
         text-align: center;
     }
+
     .column {
         margin-top: 6px;
     }
@@ -1076,25 +1124,30 @@ header {
         width: 100%;
         height: 160px;
     }
+
     .column {
         width: 50%;
         float: left;
         margin-top: -2px;
     }
+
     .uw {
         width: 100%;
         height: 150px;
         margin: 133px 0 0 -18px;
     }
+
     .stars {
         float: right;
     }
+
     .form-social {
         width: 96%;
         left: 11px;
         top: 187px;
         position: absolute;
     }
+
     .icon-social {
         left: 11px;
         bottom: 15px;
@@ -1102,45 +1155,58 @@ header {
         position: absolute;
         box-sizing: border-box;
     }
+
     .footer-bottom p {
         display: none;
     }
+
     .footer-bottom {
         height: 65px;
     }
+
     .footer-logo-left, .footer-logo-right {
         top: 10px;
     }
+
     .footer-header {
         height: 86px;
     }
+
     .footer-header li {
         font-size: 13px;
     }
+
     .column2 {
         padding-left: 4px;
         box-sizing: border-box;
     }
+
     .block-form {
         margin: 15px 0 0 0;
     }
+
     .block-form input {
         width: 83%;
     }
+
     .block-form button {
         width: 11.2%;
     }
+
     .icon-social ul {
         margin: 9px 0 0 1px;
     }
+
     .footer-nav {
         height: 103px;
     }
+
     .footer-nav-wrapper {
         padding-top: 11px;
         text-align: center;
         box-sizing: border-box;
     }
+
     .footer-nav-wrapper p {
         margin: 6px auto 13px auto;
     }
