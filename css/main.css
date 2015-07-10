@@ -433,11 +433,11 @@ header {
     padding: 0;
     width: 7000px;
     position: relative;
-    margin: 70px 0 0 -80px;
+    margin: 57px 0 0 -131px;
 }
 
 #slider li {
-    width: 480px;
+    width: 530px;
     height: 540px;
     float: left;
     list-style-type: none;
@@ -454,7 +454,7 @@ header {
     -o-transition: all 1.5s ease;
     transition: all 1.5s ease;
     opacity: 1;
-    margin-top: -70px;
+    margin-top: -58px;
 }
 
 #slider .active img {
@@ -462,7 +462,7 @@ header {
     -moz-transition: all 1.5s ease;
     -o-transition: all 1.5s ease;
     transition: all 1.5s ease;
-    width: 45%;
+    width: 42%;
     height: 71%;
 }
 
@@ -472,11 +472,11 @@ header {
 }
 
 .info-model {
-    width: 33%;
+    width: 30%;
     height: 300px;
     display: none;
     float: right;
-    margin: 26px 85px 0 0;
+    margin: 26px 134px 0 0;
 }
 
 #slider .active .info-model {
@@ -529,7 +529,7 @@ header {
     outline: none;
     cursor: pointer;
     font-size: 11px;
-    margin-top: 20px;
+    margin-top: 22px;
     padding-right: 14%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -599,7 +599,7 @@ header {
 
 @media (max-width: 790px) {
     #slider {
-        margin-left: -319px;
+        margin-left: -347px;
         margin-top: 85px;
     }
 
@@ -614,7 +614,7 @@ header {
     }
 
     .info-model {
-        margin: 29px 55px 0 0;
+        margin: 18px 128px 0 0;
     }
 }
 
@@ -657,11 +657,12 @@ header {
     }
 
     #slider {
-        margin: 0 0 0 -495px;
+        margin: 0 0 0 -527px;
     }
 
     .info-model {
-        margin: 1px 174px 0 0;
+        width: 31%;
+        margin: 0 203px 0 0;
     }
 
     .clothing-look {
@@ -685,7 +686,7 @@ header {
     }
 
     #slider li {
-        width: 500px;
+        width: 530px;
     }
 
     .clothing-price {
@@ -695,6 +696,10 @@ header {
     .price-orange {
         display: block;
         text-decoration: none;
+    }
+
+    #slider .active {
+        margin-top: -69px;
     }
 }
 

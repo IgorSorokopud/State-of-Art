@@ -8,7 +8,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="js/navMobile.js"></script>
     <script src="js/validator.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/jquery.slider.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -147,7 +147,7 @@
             </li>
         </ul>
         <div class="arrow back-arrow"></div>
-        <div class="arrow forward-arrow"></div>
+        <div class="arrow forward-arrow" id="next"></div>
 </div>
 
 <!--Footer-->
@@ -274,12 +274,11 @@
 
 <script>
     $(document).ready(function () {
-        $('#slider').slider(
-            '.back-arrow',
-            '.forward-arrow',
-            "#slider",
-            480
-        );
+        $('#slider').slider({
+            _arrow : ".arrow",
+            _idSlider : "#slider",
+            _width : 530
+        });
     });
 </script>
 
