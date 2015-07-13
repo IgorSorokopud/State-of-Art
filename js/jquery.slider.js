@@ -1,49 +1,54 @@
 ;(function ($) {
     var Slider = {
-        flag: false,
+        isClickedFlag: false,
 
         moveLeft: function () {
             var self = this;
             $('.active').removeClass('active').prev().addClass('active');
-            $(self.hParam._idSlider).animate({
-                left: +self.hParam._width
+            $(self.hParam.idSlider).animate({
+                left: +self.hParam.width
             }, 800, function () {
-                $(self.hParam._idSlider + ' li:last-child').prependTo(self.hParam._idSlider);
-                $(self.hParam._idSlider).css('left', '');
-                Slider.flag = false;
+                $(self.hParam.idSlider + ' li:last-child').prependTo(self.hParam.idSlider);
+                $(self.hParam.idSlider).css('left', '');
+                Slider.isClickedFlag = false;
             });
         },
 
         moveRight: function () {
             var self = this;
             $('.active').removeClass('active').next().addClass('active');
-            $(self.hParam._idSlider).animate({
-                right: +self.hParam._width
+            $(self.hParam.idSlider).animate({
+                right: +self.hParam.width
             }, 800, function () {
-                $(self.hParam._idSlider + ' li:first-child').appendTo(self.hParam._idSlider);
-                $(self.hParam._idSlider).css('right', '');
-                Slider.flag = false;
+                $(self.hParam.idSlider + ' li:first-child').appendTo(self.hParam.idSlider);
+                $(self.hParam.idSlider).css('right', '');
+                Slider.isClickedFlag = false;
             });
+        },
+
+        move: function (options) {
+            if (Slider.isClickedFlag) {
+                return;
+            }
+            Slider.isClickedFlag = true;
+            if (options === 'next') {
+                Slider.moveRight();
+            } else {
+                Slider.moveLeft();
+            }
         },
 
         init: function (options) {
             var self = this;
 
-            var settings = $.extend({
-                _arrow: ".arrow",
-                _idSlider: "#slider",
-                _width: 500
+            Slider.hParam = $.extend({
+                arrow: ".arrow",
+                idSlider: "#slider",
+                width: 500
             }, options);
-            Slider.hParam = settings;
 
-            $(self.hParam._arrow).on('click', function () {
-                if (Slider.flag) return false;
-                Slider.flag = true;
-                if ($(options).attr('id') === 'next') {
-                    Slider.moveRight();
-                } else {
-                    Slider.moveLeft();
-                }
+            $(self.hParam.arrow).on('click', function () {
+                Slider.move($(this).attr('id'));
             });
         }
     };
@@ -54,8 +59,6 @@
         } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
             var prototypeSlider = Object.create(Slider);
             return prototypeSlider.init.apply(prototypeSlider, arguments);
-        } else {
-            $.error('Method ' + methodOrOptions + ' does not exist on jQuery.tooltip');
         }
     };
 })(jQuery);

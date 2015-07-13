@@ -157,13 +157,13 @@ header {
 }
 
 /*Header media*/
-@media (max-width: 1050px) {
+@media only screen and (max-width: 1050px) {
     header {
         display: none;
     }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
     .price-tablet {
         background: url("../img/suitcase.png") no-repeat 4% center;
     }
@@ -249,7 +249,7 @@ header {
 }
 
 /*Header-nav media*/
-@media (max-width: 1050px) {
+@media only screen and (max-width: 1050px) {
     .header-nav ul {
         width: 33%;
         float: left;
@@ -306,13 +306,13 @@ header {
     }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
     .search {
         right: 7px;
     }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .header-nav ul {
         width: 100%;
     }
@@ -375,19 +375,19 @@ header {
 }
 
 /*Content media*/
-@media (max-width: 1050px) {
+@media only screen and (max-width: 1050px) {
     .wrapper-content {
         width: 100%;
     }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
     .wrapper-content {
         height: 687px;
     }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .list-path ul {
         display: none;
     }
@@ -578,26 +578,26 @@ header {
 }
 
 /*Slider media*/
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 
     #slider {
         margin-left: -130px;
     }
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .forward-arrow {
         right: 1%;
     }
 }
 
-@media (max-width: 850px) {
+@media only screen and (max-width: 850px) {
     #slider {
         margin-left: -200px;
     }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
     #slider {
         margin-left: -347px;
         margin-top: 85px;
@@ -618,7 +618,7 @@ header {
     }
 }
 
-@media (max-width: 670px) {
+@media only screen and (max-width: 670px) {
     .back-arrow {
         left: 2%;
     }
@@ -632,20 +632,20 @@ header {
     }
 }
 
-@media (max-width: 550px) {
+@media only screen and (max-width: 550px) {
     #slider {
         margin-left: -450px;
     }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .wrapper-content {
         height: 475px;
     }
 
     #slider .active img {
         height: 47%;
-        width: 30%;
+        width: 28%;
     }
 
     .back-arrow {
@@ -657,12 +657,12 @@ header {
     }
 
     #slider {
-        margin: 0 0 0 -527px;
+        margin: 0 0 0 -522px;
     }
 
     .info-model {
         width: 31%;
-        margin: 0 203px 0 0;
+        margin: 0 208px 0 0;
     }
 
     .clothing-look {
@@ -984,7 +984,7 @@ header {
 }
 
 /*Footer media*/
-@media (max-width: 1050px) {
+@media only screen and (max-width: 1050px) {
     .footer-wrapper {
         width: 100%;
         position: relative;
@@ -1035,7 +1035,7 @@ header {
     }
 }
 
-@media (max-width: 790px) {
+@media only screen and (max-width: 790px) {
     .column-art {
         padding: 7px 0 0 17px;
         box-sizing: border-box;
@@ -1104,7 +1104,7 @@ header {
     }
 }
 
-@media (max-width: 770px) {
+@media only screen and (max-width: 770px) {
     .footer-nav {
         height: auto;
     }
@@ -1124,7 +1124,7 @@ header {
     }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .column-footer {
         width: 100%;
         height: 160px;
