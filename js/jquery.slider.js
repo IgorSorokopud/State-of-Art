@@ -4,61 +4,74 @@
 
         moveLeft: function () {
             var self = this;
-            $('.active').removeClass('active').prev().addClass('active');
-            $(self.hParam.idSlider).animate({
+
+            self.sliderContainer.children('.active').removeClass('active').prev().addClass('active');
+            self.sliderContainer.animate({
                 left: +self.hParam.width
-            }, 800, function () {
-                $(self.hParam.idSlider + ' li:last-child').prependTo(self.hParam.idSlider);
-                $(self.hParam.idSlider).css('left', '');
-                Slider.isClickedFlag = false;
+            }, self.hParam.speed , function () {
+                self.sliderContainer.children('li:last-child').prependTo(self.sliderContainer);
+                self.sliderContainer.css('left', '');
+                self.isClickedFlag = false;
             });
         },
 
         moveRight: function () {
             var self = this;
-            $('.active').removeClass('active').next().addClass('active');
-            $(self.hParam.idSlider).animate({
+            self.sliderContainer.children('.active').removeClass('active').next().addClass('active');
+            self.sliderContainer.animate({
                 right: +self.hParam.width
-            }, 800, function () {
-                $(self.hParam.idSlider + ' li:first-child').appendTo(self.hParam.idSlider);
-                $(self.hParam.idSlider).css('right', '');
-                Slider.isClickedFlag = false;
+            }, self.hParam.speed , function () {
+                self.sliderContainer.children('li:first-child').appendTo(self.sliderContainer);
+                self.sliderContainer.css('right', '');
+                self.isClickedFlag = false;
             });
         },
 
-        move: function (options) {
-            if (Slider.isClickedFlag) {
-                return;
-            }
-            Slider.isClickedFlag = true;
-            if (options === 'next') {
-                Slider.moveRight();
-            } else {
-                Slider.moveLeft();
-            }
+        move: function () {
+            var self = this;
+
+            self.forwardArrow.on('click', function () {
+                if (self.isClickedFlag) {
+                    return;
+                }
+                self.moveRight();
+                self.isClickedFlag = true;
+            });
+
+            self.backArrow.on('click', function () {
+                if (self.isClickedFlag) {
+                    return;
+                }
+                self.moveLeft();
+                self.isClickedFlag = true;
+            });
         },
 
         init: function (options) {
             var self = this;
 
-            Slider.hParam = $.extend({
-                arrow: ".arrow",
-                idSlider: "#slider",
-                width: 500
+            self.hParam = $.extend({
+                forwardArrow: $(".forward-arrow"),
+                backArrow: $(".back-arrow"),
+                sliderContainer: $(".slider"),
+                width: 530,
+                speed: 800
             }, options);
 
-            $(self.hParam.arrow).on('click', function () {
-                Slider.move($(this).attr('id'));
-            });
+            self.forwardArrow = self.wrapperSlider.children(self.hParam.forwardArrow);
+            self.backArrow = self.wrapperSlider.children(self.hParam.backArrow);
+            self.sliderContainer = self.wrapperSlider.children(self.hParam.sliderContainer);
+
+            self.move();
         }
     };
 
     $.fn.slider = function (methodOrOptions) {
-        if (Slider[methodOrOptions]) {
-            return Slider[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
+        if (typeof methodOrOptions === 'object' || !methodOrOptions) {
             var prototypeSlider = Object.create(Slider);
-            return prototypeSlider.init.apply(prototypeSlider, arguments);
+            prototypeSlider.wrapperSlider = this;
+            prototypeSlider.init.apply(prototypeSlider, arguments);
         }
     };
+
 })(jQuery);

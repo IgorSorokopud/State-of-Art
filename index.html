@@ -81,7 +81,8 @@
         </ul>
         <span class="back-list">terug naar overzicht</span>
     </div>
-    <ul id="slider">
+    <div class="wrapper-slider-man">
+        <ul class="slider">
             <li><img src="img/man_1.png" alt="photo">
                 <div class="info-model">
                     <h1>Model 1</h1>
@@ -147,7 +148,8 @@
             </li>
         </ul>
         <div class="arrow back-arrow"></div>
-        <div class="arrow forward-arrow" id="next"></div>
+        <div class="arrow forward-arrow"></div>
+    </div>
 </div>
 
 <!--Footer-->
@@ -274,10 +276,12 @@
 
 <script>
     $(document).ready(function () {
-        $('#slider').slider({
-            arrow : ".arrow",
-            idSlider : "#slider",
-            width : 530
+        $('.wrapper-slider-man').slider({
+            forwardArrow : ".forward-arrow",
+            backArrow : ".back-arrow",
+            sliderContainer : ".slider",
+            width : 530,
+            speed: 800
         });
     });
 </script>

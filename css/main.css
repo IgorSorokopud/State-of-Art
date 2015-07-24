@@ -398,13 +398,6 @@ header {
 }
 
 /*Slider*/
-#wrapper-slider {
-    width: 500px;
-    height: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
 
 .arrow {
     width: 50px;
@@ -429,26 +422,24 @@ header {
     background: url("../img/back_arrow.png") no-repeat center;
 }
 
-#slider {
+.slider {
     padding: 0;
     width: 7000px;
     position: relative;
     margin: 57px 0 0 -131px;
 }
 
-#slider li {
+.slider li {
+    float: left;
+    opacity: 0.3;
     width: 530px;
     height: 540px;
-    float: left;
     list-style-type: none;
     background-color: #fff;
 }
 
-#slider li {
-    opacity: 0.3;
-}
 
-#slider .active {
+.slider .active {
     -webkit-transition: all 1.5s ease;
     -moz-transition: all 1.5s ease;
     -o-transition: all 1.5s ease;
@@ -457,7 +448,7 @@ header {
     margin-top: -58px;
 }
 
-#slider .active img {
+.slider .active img {
     -webkit-transition: all 1.5s ease;
     -moz-transition: all 1.5s ease;
     -o-transition: all 1.5s ease;
@@ -466,7 +457,7 @@ header {
     height: 71%;
 }
 
-#slider img {
+.slider img {
     width: 40%;
     height: 66%;
 }
@@ -479,7 +470,7 @@ header {
     margin: 26px 134px 0 0;
 }
 
-#slider .active .info-model {
+.slider .active .info-model {
     display: block;
 }
 
@@ -580,7 +571,7 @@ header {
 /*Slider media*/
 @media only screen and (max-width: 1000px) {
 
-    #slider {
+    .slider {
         margin-left: -130px;
     }
 }
@@ -592,13 +583,13 @@ header {
 }
 
 @media only screen and (max-width: 850px) {
-    #slider {
+    .slider {
         margin-left: -200px;
     }
 }
 
 @media only screen and (max-width: 790px) {
-    #slider {
+    .slider {
         margin-left: -347px;
         margin-top: 85px;
     }
@@ -627,13 +618,13 @@ header {
         right: 2%;
     }
 
-    #slider {
+    .slider {
         margin-left: -400px;
     }
 }
 
 @media only screen and (max-width: 550px) {
-    #slider {
+    .slider {
         margin-left: -450px;
     }
 }
@@ -643,7 +634,7 @@ header {
         height: 475px;
     }
 
-    #slider .active img {
+    .slider .active img {
         height: 47%;
         width: 28%;
     }
@@ -656,7 +647,7 @@ header {
         top: 410px;
     }
 
-    #slider {
+    .slider {
         margin: 0 0 0 -522px;
     }
 
@@ -685,7 +676,7 @@ header {
         right: -2%;
     }
 
-    #slider li {
+    .slider li {
         width: 530px;
     }
 
@@ -698,7 +689,7 @@ header {
         text-decoration: none;
     }
 
-    #slider .active {
+    .slider .active {
         margin-top: -69px;
     }
 }
