@@ -73,5 +73,4 @@
             prototypeSlider.init.apply(prototypeSlider, arguments);
         }
     };
-
 })(jQuery);
